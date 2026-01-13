@@ -1,7 +1,153 @@
-echo "# tamdoan0705.github.io" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/tamdoan0705/tamdoan0705.github.io.git
-git push -u origin main
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Doan My Tam - CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+}
+.container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.left{
+    background:#1f3c88;
+    color:white;
+    padding:40px 30px;
+}
+.right{
+    padding:40px;
+}
+.avatar{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin:auto;
+    display:block;
+}
+h1{
+    text-align:center;
+    margin:15px 0 5px;
+}
+.job{
+    text-align:center;
+    font-weight:300;
+}
+.section-title{
+    margin-top:30px;
+    font-weight:600;
+    font-size:18px;
+    border-bottom:2px solid #ddd;
+    padding-bottom:5px;
+}
+.info p{
+    margin:8px 0;
+}
+.skill span{
+    display:block;
+    margin:6px 0;
+}
+.timeline{
+    margin-top:15px;
+}
+.item{
+    margin-bottom:18px;
+}
+.item h4{
+    margin:0;
+}
+.item small{
+    color:gray;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="left">
+<img src="avatar.jpg" class="avatar">
+
+<h1>ĐOÀN MỸ TÂM</h1>
+<div class="job">Thực tập sinh</div>
+
+<div class="section-title">LIÊN HỆ</div>
+<div class="info">
+<p>📍 Hà Nội, Việt Nam</p>
+<p>✉️ tamdoan070504@gmail.com</p>
+<p>📞 (+84) 383 485 771</p>
+</div>
+
+<div class="section-title">KỸ NĂNG</div>
+<div class="skill">
+<span>🇨🇳 Tiếng Trung: Nghe – Nói – Đọc – Viết tốt</span>
+<span>🇬🇧 Tiếng Anh: Giao tiếp khá</span>
+<span>💻 Tin học: Word, Excel, PowerPoint</span>
+</div>
+
+<div class="section-title">THÀNH TÍCH</div>
+<p>🎓 GPA: 3.88 / 4.0</p>
+<p>🏅 05 lần liên tiếp nhận học bổng khuyến khích học tập</p>
+
+</div>
+
+<div class="right">
+
+<div class="section-title">GIỚI THIỆU</div>
+<p>
+Với tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt, tôi mong muốn tìm kiếm cơ hội thực tập để vận dụng kiến thức chuyên môn, đóng góp cho sự phát triển của công ty và không ngừng hoàn thiện bản thân.
+</p>
+
+<div class="section-title">HỌC VẤN</div>
+<div class="timeline">
+<div class="item">
+<h4>Trường Đại học Ngoại thương</h4>
+<small>10/2022 – nay | Chuyên ngành: Tiếng Trung Thương mại</small>
+</div>
+</div>
+
+<div class="section-title">KINH NGHIỆM LÀM VIỆC</div>
+
+<div class="timeline">
+<div class="item">
+<h4>Thực tập sinh – Viện Nghiên cứu Nam Ninh</h4>
+<small>06/2025 – 07/2025 | ĐH KHKT Điện tử Quế Lâm</small>
+<ul>
+<li>Hỗ trợ sắp xếp, phân loại, quản lý hồ sơ và tài liệu dự án.</li>
+<li>Tham gia tổ chức hội thảo, sự kiện; phối hợp với giảng viên & sinh viên Trung Quốc.</li>
+<li>Rèn luyện giao tiếp tiếng Trung và tác phong làm việc chuyên nghiệp.</li>
+</ul>
+</div>
+
+<div class="item">
+<h4>Gia sư Toán THPT</h4>
+<small>11/2022 – 05/2023</small>
+<ul>
+<li>Giúp học sinh nâng điểm Toán từ 5 lên 8/10.</li>
+<li>Rèn luyện kỹ năng giao tiếp, quản lý thời gian và phương pháp giảng dạy linh hoạt.</li>
+</ul>
+</div>
+</div>
+
+<div class="section-title">HOẠT ĐỘNG</div>
+<ul>
+<li>Tham gia vòng chung kết "Cuộc thi viết chữ Hán đẹp" năm 2023 – Khoa Tiếng Trung, ĐH Ngoại thương.</li>
+</ul>
+
+</div>
+
+</div>
+</body>
+</html>
+Đã gửi
+Viết cho Minnie Lee
