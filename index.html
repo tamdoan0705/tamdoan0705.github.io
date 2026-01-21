@@ -11,7 +11,7 @@
 :root{
   --bg1:#e6f3ff;
   --bg2:#ffe6f0;
-  --hero:#cfe7ff;      /* màu khung to – đậm hơn */
+  --hero:#cfe7ff;
   --hero2:#ffd6e8;
   --text:#2f2f2f;
 }
@@ -43,7 +43,7 @@ body{
   to{transform:translateY(110vh);}
 }
 
-/* ===== HERO (KHUNG TO DUY NHẤT) ===== */
+/* ===== HERO ===== */
 .hero-wrapper{
   background:linear-gradient(135deg,var(--hero),var(--hero2));
   padding:45px 8% 55px;
@@ -53,19 +53,16 @@ body{
   position:relative;
   z-index:2;
 }
-
 .hero{
   max-width:1200px;
   margin:auto;
 }
-
 .hero-box{
   display:grid;
   grid-template-columns:140px 1fr;
   gap:30px;
   align-items:center;
 }
-
 .hero img{
   width:140px;
   height:140px;
@@ -74,17 +71,15 @@ body{
   border:5px solid white;
   box-shadow:0 12px 28px rgba(0,0,0,.25);
 }
-
 .hero h1{
   margin:0;
   font-size:40px;
+  font-weight:700;
 }
-
 .hero p{
   margin:6px 0;
   font-size:16px;
 }
-
 .quote{
   font-family:'Noto Serif SC',serif;
   font-style:italic;
@@ -98,17 +93,16 @@ section{
   position:relative;
   z-index:2;
 }
-
 .section-box{
   background:rgba(255,255,255,.7);
   border-radius:26px;
   padding:26px 30px;
   box-shadow:0 14px 30px rgba(0,0,0,.1);
 }
-
 .title{
   font-size:26px;
   margin-bottom:14px;
+  font-weight:700;   /* IN ĐẬM TIÊU ĐỀ */
 }
 
 /* ===== SKILLS ===== */
@@ -146,7 +140,7 @@ footer{
 
 <div class="snow-container"></div>
 
-<!-- HERO (KHÔNG CÓ KHUNG NHỎ BÊN TRONG) -->
+<!-- HERO -->
 <div class="hero-wrapper">
   <div class="hero">
     <div class="hero-box">
@@ -164,7 +158,6 @@ footer{
 <section>
   <div class="section-box">
     <div class="title">Giới thiệu</div>
-    Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
     Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt,
     mong muốn tìm kiếm cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
   </div>
@@ -172,8 +165,8 @@ footer{
 
 <section>
   <div class="section-box">
-    <div class="title">Học vấn & Thành tích</div>
-    <p><b>Đại học Ngoại thương</b> (10/2022 – nay)<br>Tiếng Trung Thương mại</p>
+    <div class="title">Học vấn &amp; Thành tích</div>
+    <p><b>Trường Đại học Ngoại thương</b> (10/2022 – nay)<br>Tiếng Trung Thương mại</p>
     <p>GPA: <b>3.88 / 4.0</b><br>05 lần liên tiếp nhận học bổng khuyến khích học tập</p>
   </div>
 </section>
@@ -183,21 +176,21 @@ footer{
     <div class="title">Kinh nghiệm</div>
     <p><b>Thực tập sinh – Viện Nghiên cứu Nam Ninh</b> (06/2025 – 07/2025)</p>
     <ul>
-      <li>Quản lý hồ sơ & tài liệu dự án</li>
+      <li>Quản lý hồ sơ &amp; tài liệu dự án</li>
       <li>Hỗ trợ tổ chức hội thảo, sự kiện</li>
-      <li>Giao tiếp với giảng viên & sinh viên Trung Quốc</li>
+      <li>Giao tiếp với giảng viên &amp; sinh viên Trung Quốc</li>
     </ul>
     <p><b>Gia sư Toán THPT</b> (11/2022 – 05/2023)</p>
     <ul>
       <li>Nâng điểm Toán từ 5 → 8</li>
-      <li>Rèn kỹ năng giảng dạy & quản lý thời gian</li>
+      <li>Rèn kỹ năng giảng dạy &amp; quản lý thời gian</li>
     </ul>
   </div>
 </section>
 
 <section>
   <div class="section-box">
-    <div class="title">Hoạt động & Kỹ năng</div>
+    <div class="title">Hoạt động &amp; Kỹ năng</div>
     <p>Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU</p>
     <div class="badges">
       <div class="badge">Tiếng Trung tốt</div>
@@ -217,7 +210,7 @@ footer{
 
 <script>
 const snowContainer=document.querySelector('.snow-container');
-const symbols=['❄️','❅','❆'];
+const symbols=['❄️'];
 function createSnow(){
   const s=document.createElement('div');
   s.className='snowflake';
