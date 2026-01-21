@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Doan My Tam | Portfolio</title>
 
+<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -24,6 +25,17 @@ body{
   font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--dark);
+  scroll-behavior:smooth;
+}
+
+/* ===== ANIMATION ===== */
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp .9s ease forwards;
+}
+@keyframes fadeUp{
+  to{opacity:1; transform:none}
 }
 
 /* ===== HERO ===== */
@@ -34,15 +46,18 @@ body{
 }
 .hero-box{
   display:grid;
-  grid-template-columns:120px 1fr;
+  grid-template-columns:160px 1fr;
   gap:30px;
   max-width:1000px;
+  animation:fadeUp 1s ease forwards;
 }
 .hero img{
-  width:120px;
-  height:120px;
+  width:160px;
+  height:160px;
   border-radius:50%;
-  border:4px solid white;
+  object-fit:cover;
+  border:5px solid white;
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 .hero h1{
   margin:0;
@@ -50,21 +65,26 @@ body{
 }
 .hero p{
   margin:6px 0;
-  opacity:.95;
 }
 .quote{
   font-family:'Noto Serif SC',serif;
   font-style:italic;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 /* ===== SECTION ===== */
 section{
-  padding:70px 8%;
+  padding:80px 8%;
 }
 .title{
   font-size:32px;
   margin-bottom:30px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.title i{
+  color:var(--purple);
 }
 
 /* ===== GRID ===== */
@@ -78,13 +98,18 @@ section{
   border-radius:20px;
   background:white;
   box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.4s;
+}
+.box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 50px rgba(0,0,0,.12);
 }
 
-/* COLOR BOXES */
-.c1{background:linear-gradient(135deg,#e0e7ff,#f8fafc)}
-.c2{background:linear-gradient(135deg,#cffafe,#f8fafc)}
-.c3{background:linear-gradient(135deg,#fce7f3,#f8fafc)}
-.c4{background:linear-gradient(135deg,#dcfce7,#f8fafc)}
+/* COLOR BACKGROUNDS */
+.c1{background:linear-gradient(135deg,#eef2ff,#ffffff)}
+.c2{background:linear-gradient(135deg,#ecfeff,#ffffff)}
+.c3{background:linear-gradient(135deg,#fce7f3,#ffffff)}
+.c4{background:linear-gradient(135deg,#dcfce7,#ffffff)}
 
 .badges{
   display:flex;
@@ -105,6 +130,12 @@ footer{
   background:#0f172a;
   color:white;
 }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-box{grid-template-columns:1fr}
+  .hero img{margin-bottom:20px}
+}
 </style>
 </head>
 
@@ -117,29 +148,31 @@ footer{
     <div>
       <h1>ĐOÀN MỸ TÂM</h1>
       <p>Business Chinese · Foreign Trade University</p>
-      <p><i class="fa-solid fa-location-dot"></i> Hà Nội · 
-         <i class="fa-solid fa-envelope"></i> tamdoan070504@gmail.com · 
-         <i class="fa-solid fa-phone"></i> 0383 485 771</p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i> Hà Nội &nbsp;
+        <i class="fa-solid fa-envelope"></i> tamdoan070504@gmail.com &nbsp;
+        <i class="fa-solid fa-phone"></i> 0383 485 771
+      </p>
       <div class="quote">今天的努力，是为了明天更好的自己</div>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section>
-  <div class="title">Giới thiệu</div>
+<section class="fade-up">
+  <div class="title"><i class="fa-solid fa-user"></i> Giới thiệu</div>
   <div class="grid">
     <div class="box c1">
       Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
-      Tôi có tinh thần trách nhiệm cao, học hỏi nhanh và làm việc nhóm tốt, mong muốn tìm kiếm
-      cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
+      Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt,
+      mong muốn tìm kiếm cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
     </div>
   </div>
 </section>
 
 <!-- EDUCATION & ACHIEVEMENTS -->
-<section>
-  <div class="title">Học vấn & Thành tích</div>
+<section class="fade-up">
+  <div class="title"><i class="fa-solid fa-graduation-cap"></i> Học vấn & Thành tích</div>
   <div class="grid">
     <div class="box c2">
       <b>Đại học Ngoại thương</b><br>
@@ -156,8 +189,8 @@ footer{
 </section>
 
 <!-- EXPERIENCE -->
-<section>
-  <div class="title">Kinh nghiệm</div>
+<section class="fade-up">
+  <div class="title"><i class="fa-solid fa-briefcase"></i> Kinh nghiệm</div>
   <div class="grid">
     <div class="box c4">
       <b>Thực tập sinh – Viện Nghiên cứu Nam Ninh</b><br>
@@ -180,8 +213,8 @@ footer{
 </section>
 
 <!-- ACTIVITIES & SKILLS -->
-<section>
-  <div class="title">Hoạt động & Kỹ năng</div>
+<section class="fade-up">
+  <div class="title"><i class="fa-solid fa-star"></i> Hoạt động & Kỹ năng</div>
   <div class="grid">
     <div class="box c2">
       Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU
@@ -201,7 +234,7 @@ footer{
 </section>
 
 <footer>
-© 2026 Doan My Tam · Color Portfolio
+© 2026 Doan My Tam · Animated Portfolio
 </footer>
 
 </body>
