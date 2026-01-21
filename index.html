@@ -18,6 +18,7 @@
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:'Quicksand',sans-serif;
@@ -33,46 +34,60 @@ body{
   width:100%;
   height:100%;
   pointer-events:none;
-  overflow:hidden;
   z-index:0;
 }
 .snowflake{
   position:absolute;
   top:-10px;
   font-size:14px;
-  opacity:0.8;
+  opacity:0.7;
   animation:fall linear infinite;
 }
 @keyframes fall{
   to{transform:translateY(110vh);}
 }
 
-/* ===== HERO ===== */
-.hero{
-  padding:70px 8% 50px;
+/* ===== HERO WRAPPER ===== */
+.hero-wrapper{
+  background:linear-gradient(135deg,#dff1ff,#ffe8f1);
+  padding:40px 0 60px;
+  border-bottom-left-radius:50px;
+  border-bottom-right-radius:50px;
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
   position:relative;
   z-index:2;
 }
+
+/* ===== HERO ===== */
+.hero{
+  max-width:1100px;
+  margin:auto;
+  background:rgba(255,255,255,.65);
+  backdrop-filter:blur(10px);
+  border-radius:30px;
+  padding:32px;
+  box-shadow:0 16px 35px rgba(0,0,0,.15);
+}
 .hero-box{
   display:grid;
-  grid-template-columns:110px 1fr;
-  gap:24px;
+  grid-template-columns:120px 1fr;
+  gap:28px;
   align-items:center;
 }
 .hero img{
-  width:110px;
-  height:110px;
+  width:120px;
+  height:120px;
   border-radius:50%;
   object-fit:cover;
   border:4px solid white;
-  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  box-shadow:0 10px 22px rgba(0,0,0,.2);
 }
 .hero h1{
   margin:0;
-  font-size:36px;
+  font-size:38px;
 }
 .hero p{
-  margin:4px 0;
+  margin:5px 0;
 }
 .quote{
   font-family:'Noto Serif SC',serif;
@@ -82,27 +97,27 @@ body{
 
 /* ===== SECTION ===== */
 section{
-  padding:40px 8%;
+  padding:42px 8%;
   position:relative;
   z-index:2;
 }
 .title{
   font-size:26px;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 /* ===== GRID ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
+  gap:14px;
 }
 .card{
   background:var(--card);
   padding:18px 20px;
   border-radius:18px;
   box-shadow:0 10px 25px rgba(0,0,0,.08);
-  transition:.35s;
+  transition:.3s;
 }
 .card:hover{
   transform:translateY(-6px);
@@ -141,18 +156,19 @@ footer{
 
 <body>
 
-<!-- SNOW -->
 <div class="snow-container"></div>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-box">
-    <img src="avatar.jpg">
-    <div>
-      <h1>ĐOÀN MỸ TÂM</h1>
-      <p>Business Chinese · Foreign Trade University</p>
-      <p>📍 Hà Nội · ✉️ tamdoan070504@gmail.com · 📞 0383 485 771</p>
-      <div class="quote">今天的努力，是为了明天更好的自己</div>
+<div class="hero-wrapper">
+  <div class="hero">
+    <div class="hero-box">
+      <img src="avatar.jpg">
+      <div>
+        <h1>ĐOÀN MỸ TÂM</h1>
+        <p>Business Chinese · Foreign Trade University</p>
+        <p>📍 Hà Nội · ✉️ tamdoan070504@gmail.com · 📞 0383 485 771</p>
+        <div class="quote">今天的努力，是为了明天更好的自己</div>
+      </div>
     </div>
   </div>
 </div>
@@ -162,6 +178,7 @@ footer{
   <div class="title">Giới thiệu</div>
   <div class="grid">
     <div class="card">
+      Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
       Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt,
       mong muốn tìm kiếm cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
     </div>
@@ -173,12 +190,12 @@ footer{
   <div class="title">Học vấn & Thành tích</div>
   <div class="grid">
     <div class="card">
-      <b>Trường đại học Ngoại thương</b><br>
+      <b>Đại học Ngoại thương</b><br>
       10/2022 – nay<br>
       Tiếng Trung Thương mại
     </div>
     <div class="card">
-      GPA: <b>3.8 / 4.0</b><br>
+      GPA: <b>3.88 / 4.0</b><br>
       05 lần liên tiếp nhận học bổng khuyến khích học tập
     </div>
   </div>
@@ -233,10 +250,9 @@ footer{
 © 2026 Doan My Tam · Pastel Portfolio
 </footer>
 
-<!-- SNOW SCRIPT -->
 <script>
 const snowContainer = document.querySelector('.snow-container');
-const symbols = ['❄️'];
+const symbols = ['❄️','❅','❆'];
 
 function createSnow(){
   const s = document.createElement('div');
@@ -247,7 +263,6 @@ function createSnow(){
   s.style.opacity = Math.random();
   s.style.animationDuration = Math.random()*5 + 6 + 's';
   snowContainer.appendChild(s);
-
   setTimeout(()=>s.remove(),11000);
 }
 setInterval(createSnow,350);
