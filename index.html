@@ -10,11 +10,12 @@
 
 <style>
 :root{
-  --bg:#f6f8fc;
+  --purple:#6366f1;
+  --blue:#38bdf8;
+  --pink:#f472b6;
+  --green:#34d399;
+  --bg:#f8fafc;
   --dark:#0f172a;
-  --primary:#4f46e5;
-  --soft:#eef2ff;
-  --card:#ffffff;
 }
 
 *{box-sizing:border-box}
@@ -23,107 +24,86 @@ body{
   font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--dark);
-  line-height:1.6;
 }
 
 /* ===== HERO ===== */
 .hero{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:60px;
-  padding:100px 10%;
-  background:linear-gradient(135deg,#4f46e5,#6366f1);
+  padding:90px 8%;
+  background:linear-gradient(120deg,var(--purple),var(--blue),var(--pink));
   color:white;
 }
+.hero-box{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:30px;
+  max-width:1000px;
+}
 .hero img{
-  width:100%;
-  border-radius:30px;
-  box-shadow:0 25px 60px rgba(0,0,0,.3);
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:4px solid white;
 }
 .hero h1{
-  font-size:50px;
   margin:0;
+  font-size:42px;
 }
-.hero h3{
-  font-weight:400;
-  opacity:.9;
+.hero p{
+  margin:6px 0;
+  opacity:.95;
 }
 .quote{
   font-family:'Noto Serif SC',serif;
-  font-size:20px;
   font-style:italic;
-  margin:30px 0;
-}
-.contact{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  font-size:15px;
+  margin-top:12px;
 }
 
 /* ===== SECTION ===== */
 section{
-  padding:90px 10%;
+  padding:70px 8%;
 }
-.section-title{
-  font-size:36px;
-  margin-bottom:40px;
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-.section-title i{
-  color:var(--primary);
+.title{
+  font-size:32px;
+  margin-bottom:30px;
 }
 
 /* ===== GRID ===== */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
 }
-.card{
-  background:var(--card);
-  padding:35px;
-  border-radius:22px;
-  box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-.card img{
-  width:100%;
-  border-radius:16px;
-  margin-bottom:20px;
-}
-.card h4{
-  margin-top:0;
+.box{
+  padding:28px;
+  border-radius:20px;
+  background:white;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
-/* ===== BADGES ===== */
+/* COLOR BOXES */
+.c1{background:linear-gradient(135deg,#e0e7ff,#f8fafc)}
+.c2{background:linear-gradient(135deg,#cffafe,#f8fafc)}
+.c3{background:linear-gradient(135deg,#fce7f3,#f8fafc)}
+.c4{background:linear-gradient(135deg,#dcfce7,#f8fafc)}
+
 .badges{
   display:flex;
   flex-wrap:wrap;
-  gap:12px;
+  gap:10px;
 }
 .badge{
-  background:var(--soft);
-  color:var(--primary);
-  padding:10px 16px;
-  border-radius:20px;
-  font-weight:500;
+  padding:8px 14px;
+  border-radius:18px;
+  background:white;
+  font-size:14px;
+  box-shadow:0 6px 15px rgba(0,0,0,.1);
 }
 
-/* ===== FOOTER ===== */
 footer{
-  background:var(--dark);
-  color:white;
+  padding:30px;
   text-align:center;
-  padding:40px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-  }
+  background:#0f172a;
+  color:white;
 }
 </style>
 </head>
@@ -132,125 +112,96 @@ footer{
 
 <!-- HERO -->
 <div class="hero">
-<div>
-<h1>ĐOÀN MỸ TÂM</h1>
-<h3>Business Chinese · Foreign Trade University</h3>
-
-<div class="quote">
-今天的努力，是为了明天更好的自己
-</div>
-
-<div class="contact">
-<div><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</div>
-<div><i class="fa-solid fa-envelope"></i> tamdoan070504@gmail.com</div>
-<div><i class="fa-solid fa-phone"></i> 0383 485 771</div>
-</div>
-</div>
-
-<img src="cover.jpg">
+  <div class="hero-box">
+    <img src="avatar.jpg">
+    <div>
+      <h1>ĐOÀN MỸ TÂM</h1>
+      <p>Business Chinese · Foreign Trade University</p>
+      <p><i class="fa-solid fa-location-dot"></i> Hà Nội · 
+         <i class="fa-solid fa-envelope"></i> tamdoan070504@gmail.com · 
+         <i class="fa-solid fa-phone"></i> 0383 485 771</p>
+      <div class="quote">今天的努力，是为了明天更好的自己</div>
+    </div>
+  </div>
 </div>
 
 <!-- ABOUT -->
 <section>
-<div class="section-title">
-<i class="fa-solid fa-user"></i> Giới thiệu
-</div>
-
-<div class="grid">
-<div class="card">
-<img src="avatar.jpg">
-<p>
-Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
-Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt, mong muốn tìm kiếm cơ hội thực tập để vận dụng kiến thức chuyên môn vào thực tế và phát triển bản thân.
-</p>
-</div>
-</div>
+  <div class="title">Giới thiệu</div>
+  <div class="grid">
+    <div class="box c1">
+      Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
+      Tôi có tinh thần trách nhiệm cao, học hỏi nhanh và làm việc nhóm tốt, mong muốn tìm kiếm
+      cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
+    </div>
+  </div>
 </section>
 
 <!-- EDUCATION & ACHIEVEMENTS -->
 <section>
-<div class="section-title">
-<i class="fa-solid fa-graduation-cap"></i> Học vấn & Thành tích
-</div>
-
-<div class="grid">
-<div class="card">
-<img src="study.jpg">
-<h4>Đại học Ngoại thương</h4>
-<p>10/2022 – nay</p>
-<p>Chuyên ngành: Tiếng Trung Thương mại</p>
-</div>
-
-<div class="card">
-<h4>Thành tích nổi bật</h4>
-<ul>
-<li>GPA: <b>3.88 / 4.0</b></li>
-<li>05 lần liên tiếp nhận học bổng khuyến khích học tập</li>
-</ul>
-</div>
-</div>
+  <div class="title">Học vấn & Thành tích</div>
+  <div class="grid">
+    <div class="box c2">
+      <b>Đại học Ngoại thương</b><br>
+      10/2022 – nay<br>
+      Tiếng Trung Thương mại
+    </div>
+    <div class="box c3">
+      <ul>
+        <li>GPA: <b>3.88 / 4.0</b></li>
+        <li>05 lần liên tiếp nhận học bổng khuyến khích học tập</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section>
-<div class="section-title">
-<i class="fa-solid fa-briefcase"></i> Kinh nghiệm
-</div>
-
-<div class="grid">
-<div class="card">
-<img src="work.jpg">
-<h4>Thực tập sinh – Viện Nghiên cứu Nam Ninh</h4>
-<p>06/2025 – 07/2025</p>
-<ul>
-<li>Quản lý, phân loại hồ sơ và tài liệu dự án</li>
-<li>Hỗ trợ tổ chức hội thảo, sự kiện</li>
-<li>Giao tiếp và làm việc với giảng viên, sinh viên Trung Quốc</li>
-</ul>
-</div>
-
-<div class="card">
-<h4>Gia sư Toán THPT</h4>
-<p>11/2022 – 05/2023</p>
-<ul>
-<li>Nâng điểm Toán từ 5 → 8/10</li>
-<li>Phát triển kỹ năng giảng dạy & quản lý thời gian</li>
-</ul>
-</div>
-</div>
+  <div class="title">Kinh nghiệm</div>
+  <div class="grid">
+    <div class="box c4">
+      <b>Thực tập sinh – Viện Nghiên cứu Nam Ninh</b><br>
+      06/2025 – 07/2025
+      <ul>
+        <li>Quản lý hồ sơ & tài liệu dự án</li>
+        <li>Hỗ trợ tổ chức hội thảo, sự kiện</li>
+        <li>Giao tiếp với giảng viên & sinh viên Trung Quốc</li>
+      </ul>
+    </div>
+    <div class="box c1">
+      <b>Gia sư Toán THPT</b><br>
+      11/2022 – 05/2023
+      <ul>
+        <li>Nâng điểm Toán từ 5 → 8</li>
+        <li>Rèn kỹ năng giảng dạy & quản lý thời gian</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- ACTIVITIES & SKILLS -->
 <section>
-<div class="section-title">
-<i class="fa-solid fa-star"></i> Hoạt động & Kỹ năng
-</div>
-
-<div class="grid">
-<div class="card">
-<img src="activity.jpg">
-<ul>
-<li>Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU</li>
-</ul>
-</div>
-
-<div class="card">
-<h4>Kỹ năng</h4>
-<div class="badges">
-<div class="badge">Tiếng Trung: Nghe – Nói – Đọc – Viết tốt</div>
-<div class="badge">Tiếng Anh: Giao tiếp khá</div>
-<div class="badge">Word</div>
-<div class="badge">Excel</div>
-<div class="badge">PowerPoint</div>
-<div class="badge">Làm việc nhóm</div>
-<div class="badge">Quản lý thời gian</div>
-</div>
-</div>
-</div>
+  <div class="title">Hoạt động & Kỹ năng</div>
+  <div class="grid">
+    <div class="box c2">
+      Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU
+    </div>
+    <div class="box c3">
+      <div class="badges">
+        <div class="badge">Tiếng Trung: Nghe – Nói – Đọc – Viết tốt</div>
+        <div class="badge">Tiếng Anh: Giao tiếp khá</div>
+        <div class="badge">Word</div>
+        <div class="badge">Excel</div>
+        <div class="badge">PowerPoint</div>
+        <div class="badge">Làm việc nhóm</div>
+        <div class="badge">Quản lý thời gian</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 Doan My Tam · Creative Web Portfolio
+© 2026 Doan My Tam · Color Portfolio
 </footer>
 
 </body>
