@@ -2,140 +2,113 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Doan My Tam | Creative Portfolio</title>
+<title>Doan My Tam | Portfolio</title>
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 :root{
+  --bg:#f6f8fc;
   --dark:#0f172a;
-  --light:#f8fafc;
-  --accent:#6366f1;
-  --soft:#e0e7ff;
+  --primary:#4f46e5;
+  --soft:#eef2ff;
+  --card:#ffffff;
 }
 
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:'Inter',sans-serif;
-  background:var(--light);
+  background:var(--bg);
   color:var(--dark);
-  scroll-behavior:smooth;
-}
-
-/* ===== MUSIC ===== */
-.music{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  z-index:99;
+  line-height:1.6;
 }
 
 /* ===== HERO ===== */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#0f172a,#312e81);
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+  padding:100px 10%;
+  background:linear-gradient(135deg,#4f46e5,#6366f1);
   color:white;
-  text-align:center;
-  padding:60px 10%;
 }
-
 .hero img{
-  width:180px;
-  border-radius:50%;
-  box-shadow:0 20px 40px rgba(0,0,0,.4);
-  margin-bottom:30px;
+  width:100%;
+  border-radius:30px;
+  box-shadow:0 25px 60px rgba(0,0,0,.3);
 }
-
 .hero h1{
-  font-size:48px;
+  font-size:50px;
   margin:0;
 }
-
 .hero h3{
   font-weight:400;
   opacity:.9;
 }
-
 .quote{
   font-family:'Noto Serif SC',serif;
   font-size:20px;
   font-style:italic;
-  margin:30px auto;
-  max-width:600px;
-  opacity:.95;
+  margin:30px 0;
 }
-
-/* ===== SECTIONS ===== */
-section{
-  padding:100px 12%;
-}
-
-.section-title{
-  font-size:34px;
-  margin-bottom:40px;
-  position:relative;
-}
-
-.section-title::after{
-  content:'';
-  width:60px;
-  height:4px;
-  background:var(--accent);
-  position:absolute;
-  bottom:-12px;
-  left:0;
-  border-radius:2px;
-}
-
-/* ===== CONTENT BLOCK ===== */
-.block{
-  background:white;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 25px 60px rgba(0,0,0,.08);
-  margin-bottom:40px;
-}
-
-/* ===== TIMELINE ===== */
-.timeline{
-  border-left:3px solid var(--accent);
-  padding-left:30px;
-}
-
-.timeline-item{
-  margin-bottom:30px;
-}
-
-.timeline-item h4{
-  margin:0;
-  font-size:18px;
-}
-
-.timeline-item span{
-  color:#64748b;
-  font-size:14px;
-}
-
-/* ===== SKILLS ===== */
-.skills{
+.contact{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:20px;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  font-size:15px;
 }
 
-.skill{
+/* ===== SECTION ===== */
+section{
+  padding:90px 10%;
+}
+.section-title{
+  font-size:36px;
+  margin-bottom:40px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.section-title i{
+  color:var(--primary);
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.card{
+  background:var(--card);
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+.card img{
+  width:100%;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+.card h4{
+  margin-top:0;
+}
+
+/* ===== BADGES ===== */
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.badge{
   background:var(--soft);
-  padding:18px;
-  border-radius:14px;
+  color:var(--primary);
+  padding:10px 16px;
+  border-radius:20px;
   font-weight:500;
-  text-align:center;
 }
 
 /* ===== FOOTER ===== */
@@ -144,30 +117,22 @@ footer{
   color:white;
   text-align:center;
   padding:40px;
-  font-size:14px;
 }
 
 /* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  section{padding:80px 8%}
-  .hero h1{font-size:38px}
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🎵 BACKGROUND MUSIC -->
-<div class="music">
-<audio controls loop>
-  <source src="bg-music.mp3" type="audio/mpeg">
-</audio>
-</div>
-
 <!-- HERO -->
 <div class="hero">
 <div>
-<img src="avatar.jpg">
 <h1>ĐOÀN MỸ TÂM</h1>
 <h3>Business Chinese · Foreign Trade University</h3>
 
@@ -175,95 +140,117 @@ footer{
 今天的努力，是为了明天更好的自己
 </div>
 
-<p>📍 Hà Nội, Việt Nam · ✉️ tamdoan070504@gmail.com · 📞 0383 485 771</p>
+<div class="contact">
+<div><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</div>
+<div><i class="fa-solid fa-envelope"></i> tamdoan070504@gmail.com</div>
+<div><i class="fa-solid fa-phone"></i> 0383 485 771</div>
 </div>
+</div>
+
+<img src="cover.jpg">
 </div>
 
 <!-- ABOUT -->
 <section>
-<h2 class="section-title">Giới thiệu</h2>
-<div class="block">
+<div class="section-title">
+<i class="fa-solid fa-user"></i> Giới thiệu
+</div>
+
+<div class="grid">
+<div class="card">
+<img src="avatar.jpg">
 <p>
-Tôi là sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương. 
-Với tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt, tôi mong muốn tìm kiếm cơ hội thực tập để vận dụng kiến thức chuyên môn vào thực tế, đóng góp cho sự phát triển của doanh nghiệp và không ngừng hoàn thiện bản thân.
+Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
+Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt, mong muốn tìm kiếm cơ hội thực tập để vận dụng kiến thức chuyên môn vào thực tế và phát triển bản thân.
 </p>
 </div>
-</section>
-
-<!-- EDUCATION -->
-<section>
-<h2 class="section-title">Học vấn</h2>
-<div class="block timeline">
-<div class="timeline-item">
-<h4>Trường Đại học Ngoại thương</h4>
-<span>10/2022 – nay · Tiếng Trung Thương mại</span>
-</div>
 </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- EDUCATION & ACHIEVEMENTS -->
 <section>
-<h2 class="section-title">Thành tích</h2>
-<div class="block">
+<div class="section-title">
+<i class="fa-solid fa-graduation-cap"></i> Học vấn & Thành tích
+</div>
+
+<div class="grid">
+<div class="card">
+<img src="study.jpg">
+<h4>Đại học Ngoại thương</h4>
+<p>10/2022 – nay</p>
+<p>Chuyên ngành: Tiếng Trung Thương mại</p>
+</div>
+
+<div class="card">
+<h4>Thành tích nổi bật</h4>
 <ul>
 <li>GPA: <b>3.88 / 4.0</b></li>
 <li>05 lần liên tiếp nhận học bổng khuyến khích học tập</li>
 </ul>
 </div>
+</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section>
-<h2 class="section-title">Kinh nghiệm</h2>
-<div class="block timeline">
+<div class="section-title">
+<i class="fa-solid fa-briefcase"></i> Kinh nghiệm
+</div>
 
-<div class="timeline-item">
+<div class="grid">
+<div class="card">
+<img src="work.jpg">
 <h4>Thực tập sinh – Viện Nghiên cứu Nam Ninh</h4>
-<span>06/2025 – 07/2025 · ĐH KHKT Điện tử Quế Lâm</span>
+<p>06/2025 – 07/2025</p>
 <ul>
-<li>Hỗ trợ quản lý và phân loại hồ sơ, tài liệu dự án</li>
-<li>Tham gia tổ chức hội thảo, sự kiện</li>
-<li>Rèn luyện giao tiếp tiếng Trung và tác phong chuyên nghiệp</li>
+<li>Quản lý, phân loại hồ sơ và tài liệu dự án</li>
+<li>Hỗ trợ tổ chức hội thảo, sự kiện</li>
+<li>Giao tiếp và làm việc với giảng viên, sinh viên Trung Quốc</li>
 </ul>
 </div>
 
-<div class="timeline-item">
+<div class="card">
 <h4>Gia sư Toán THPT</h4>
-<span>11/2022 – 05/2023</span>
+<p>11/2022 – 05/2023</p>
 <ul>
-<li>Giúp học sinh nâng điểm Toán từ 5 lên 8/10</li>
-<li>Phát triển kỹ năng giảng dạy và quản lý thời gian</li>
+<li>Nâng điểm Toán từ 5 → 8/10</li>
+<li>Phát triển kỹ năng giảng dạy & quản lý thời gian</li>
 </ul>
 </div>
-
 </div>
 </section>
 
-<!-- ACTIVITIES -->
+<!-- ACTIVITIES & SKILLS -->
 <section>
-<h2 class="section-title">Hoạt động</h2>
-<div class="block">
+<div class="section-title">
+<i class="fa-solid fa-star"></i> Hoạt động & Kỹ năng
+</div>
+
+<div class="grid">
+<div class="card">
+<img src="activity.jpg">
 <ul>
-<li>Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – ĐH Ngoại thương</li>
+<li>Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU</li>
 </ul>
 </div>
-</section>
 
-<!-- SKILLS -->
-<section>
-<h2 class="section-title">Kỹ năng</h2>
-<div class="block skills">
-<div class="skill">Tiếng Trung: Nghe – Nói – Đọc – Viết tốt</div>
-<div class="skill">Tiếng Anh: Giao tiếp khá</div>
-<div class="skill">Word · Excel · PowerPoint</div>
-<div class="skill">Làm việc nhóm</div>
-<div class="skill">Quản lý thời gian</div>
-<div class="skill">Giao tiếp</div>
+<div class="card">
+<h4>Kỹ năng</h4>
+<div class="badges">
+<div class="badge">Tiếng Trung: Nghe – Nói – Đọc – Viết tốt</div>
+<div class="badge">Tiếng Anh: Giao tiếp khá</div>
+<div class="badge">Word</div>
+<div class="badge">Excel</div>
+<div class="badge">PowerPoint</div>
+<div class="badge">Làm việc nhóm</div>
+<div class="badge">Quản lý thời gian</div>
+</div>
+</div>
 </div>
 </section>
 
 <footer>
-© 2026 Doan My Tam · Creative Portfolio
+© 2026 Doan My Tam · Creative Web Portfolio
 </footer>
 
 </body>
