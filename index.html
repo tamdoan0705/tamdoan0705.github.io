@@ -4,142 +4,135 @@
 <meta charset="UTF-8">
 <title>Doan My Tam | Portfolio</title>
 
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 :root{
-  --purple:#6366f1;
-  --blue:#38bdf8;
-  --pink:#f472b6;
-  --green:#34d399;
-  --bg:#f8fafc;
-  --dark:#0f172a;
+  --blue:#e8f4ff;
+  --pink:#ffeaf4;
+  --purple:#6b6ee8;
+  --text:#2f2f2f;
+  --card:#ffffff;
 }
 
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--dark);
-  scroll-behavior:smooth;
+  font-family:'Quicksand',sans-serif;
+  background:linear-gradient(180deg,var(--blue),var(--pink));
+  color:var(--text);
 }
 
-/* ===== ANIMATION ===== */
-.fade-up{
-  opacity:0;
-  transform:translateY(30px);
-  animation:fadeUp .9s ease forwards;
+/* ===== FLOATING DECOR ===== */
+.decor{
+  position:fixed;
+  font-size:24px;
+  animation:float 6s ease-in-out infinite;
+  opacity:.5;
 }
-@keyframes fadeUp{
-  to{opacity:1; transform:none}
+.d1{top:12%; left:6%}
+.d2{top:40%; right:8%; animation-delay:2s}
+.d3{bottom:15%; left:12%; animation-delay:4s}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
 }
 
 /* ===== HERO ===== */
 .hero{
-  padding:90px 8%;
-  background:linear-gradient(120deg,var(--purple),var(--blue),var(--pink));
-  color:white;
+  padding:70px 8% 50px;
 }
 .hero-box{
   display:grid;
-  grid-template-columns:160px 1fr;
-  gap:30px;
-  max-width:1000px;
-  animation:fadeUp 1s ease forwards;
+  grid-template-columns:110px 1fr;
+  gap:24px;
+  align-items:center;
 }
 .hero img{
-  width:160px;
-  height:160px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   object-fit:cover;
-  border:5px solid white;
-  box-shadow:0 15px 30px rgba(0,0,0,.25);
+  border:4px solid white;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 .hero h1{
   margin:0;
-  font-size:42px;
+  font-size:36px;
 }
 .hero p{
-  margin:6px 0;
+  margin:4px 0;
 }
 .quote{
   font-family:'Noto Serif SC',serif;
   font-style:italic;
-  margin-top:10px;
+  margin-top:6px;
 }
 
 /* ===== SECTION ===== */
 section{
-  padding:80px 8%;
+  padding:40px 8%;
 }
 .title{
-  font-size:32px;
-  margin-bottom:30px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.title i{
-  color:var(--purple);
+  font-size:26px;
+  margin-bottom:16px;
 }
 
 /* ===== GRID ===== */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
 }
-.box{
-  padding:28px;
-  border-radius:20px;
-  background:white;
-  box-shadow:0 15px 35px rgba(0,0,0,.08);
-  transition:.4s;
+.card{
+  background:var(--card);
+  padding:18px 20px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.35s;
 }
-.box:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 50px rgba(0,0,0,.12);
+.card:hover{
+  transform:translateY(-6px);
 }
 
-/* COLOR BACKGROUNDS */
-.c1{background:linear-gradient(135deg,#eef2ff,#ffffff)}
-.c2{background:linear-gradient(135deg,#ecfeff,#ffffff)}
-.c3{background:linear-gradient(135deg,#fce7f3,#ffffff)}
-.c4{background:linear-gradient(135deg,#dcfce7,#ffffff)}
-
+/* ===== SKILLS ===== */
 .badges{
   display:flex;
   flex-wrap:wrap;
-  gap:10px;
+  gap:8px;
 }
 .badge{
-  padding:8px 14px;
-  border-radius:18px;
-  background:white;
+  background:var(--blue);
+  padding:6px 12px;
+  border-radius:14px;
   font-size:14px;
-  box-shadow:0 6px 15px rgba(0,0,0,.1);
 }
 
+/* ===== FOOTER ===== */
 footer{
-  padding:30px;
   text-align:center;
-  background:#0f172a;
-  color:white;
+  padding:20px;
+  font-size:14px;
+  opacity:.7;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
   .hero-box{grid-template-columns:1fr}
-  .hero img{margin-bottom:20px}
+  .hero img{margin-bottom:10px}
 }
 </style>
 </head>
 
 <body>
+
+<!-- DECOR -->
+<div class="decor d1">❄️</div>
+<div class="decor d2">🌸</div>
+<div class="decor d3">✨</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -148,21 +141,17 @@ footer{
     <div>
       <h1>ĐOÀN MỸ TÂM</h1>
       <p>Business Chinese · Foreign Trade University</p>
-      <p>
-        <i class="fa-solid fa-location-dot"></i> Hà Nội &nbsp;
-        <i class="fa-solid fa-envelope"></i> tamdoan070504@gmail.com &nbsp;
-        <i class="fa-solid fa-phone"></i> 0383 485 771
-      </p>
+      <p>📍 Hà Nội · ✉️ tamdoan070504@gmail.com · 📞 0383 485 771</p>
       <div class="quote">今天的努力，是为了明天更好的自己</div>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section class="fade-up">
-  <div class="title"><i class="fa-solid fa-user"></i> Giới thiệu</div>
+<section>
+  <div class="title">Giới thiệu</div>
   <div class="grid">
-    <div class="box c1">
+    <div class="card">
       Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
       Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt,
       mong muốn tìm kiếm cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
@@ -170,29 +159,27 @@ footer{
   </div>
 </section>
 
-<!-- EDUCATION & ACHIEVEMENTS -->
-<section class="fade-up">
-  <div class="title"><i class="fa-solid fa-graduation-cap"></i> Học vấn & Thành tích</div>
+<!-- EDUCATION -->
+<section>
+  <div class="title">Học vấn & Thành tích</div>
   <div class="grid">
-    <div class="box c2">
+    <div class="card">
       <b>Đại học Ngoại thương</b><br>
       10/2022 – nay<br>
       Tiếng Trung Thương mại
     </div>
-    <div class="box c3">
-      <ul>
-        <li>GPA: <b>3.88 / 4.0</b></li>
-        <li>05 lần liên tiếp nhận học bổng khuyến khích học tập</li>
-      </ul>
+    <div class="card">
+      GPA: <b>3.88 / 4.0</b><br>
+      05 lần liên tiếp nhận học bổng khuyến khích học tập
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="fade-up">
-  <div class="title"><i class="fa-solid fa-briefcase"></i> Kinh nghiệm</div>
+<section>
+  <div class="title">Kinh nghiệm</div>
   <div class="grid">
-    <div class="box c4">
+    <div class="card">
       <b>Thực tập sinh – Viện Nghiên cứu Nam Ninh</b><br>
       06/2025 – 07/2025
       <ul>
@@ -201,7 +188,7 @@ footer{
         <li>Giao tiếp với giảng viên & sinh viên Trung Quốc</li>
       </ul>
     </div>
-    <div class="box c1">
+    <div class="card">
       <b>Gia sư Toán THPT</b><br>
       11/2022 – 05/2023
       <ul>
@@ -213,16 +200,16 @@ footer{
 </section>
 
 <!-- ACTIVITIES & SKILLS -->
-<section class="fade-up">
-  <div class="title"><i class="fa-solid fa-star"></i> Hoạt động & Kỹ năng</div>
+<section>
+  <div class="title">Hoạt động & Kỹ năng</div>
   <div class="grid">
-    <div class="box c2">
+    <div class="card">
       Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU
     </div>
-    <div class="box c3">
+    <div class="card">
       <div class="badges">
-        <div class="badge">Tiếng Trung: Nghe – Nói – Đọc – Viết tốt</div>
-        <div class="badge">Tiếng Anh: Giao tiếp khá</div>
+        <div class="badge">Tiếng Trung tốt</div>
+        <div class="badge">Tiếng Anh khá</div>
         <div class="badge">Word</div>
         <div class="badge">Excel</div>
         <div class="badge">PowerPoint</div>
@@ -234,7 +221,7 @@ footer{
 </section>
 
 <footer>
-© 2026 Doan My Tam · Animated Portfolio
+© 2026 Doan My Tam · Pastel Portfolio
 </footer>
 
 </body>
