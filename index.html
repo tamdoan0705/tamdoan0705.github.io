@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Doan My Tam | Portfolio</title>
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
 
@@ -14,7 +13,6 @@
   --pink:#ffeaf4;
   --purple:#6b6ee8;
   --text:#2f2f2f;
-  --card:#ffffff;
 }
 
 *{box-sizing:border-box}
@@ -26,13 +24,10 @@ body{
   color:var(--text);
 }
 
-/* ===== SNOW EFFECT ===== */
+/* ===== SNOW ===== */
 .snow-container{
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset:0;
   pointer-events:none;
   z-index:0;
 }
@@ -40,7 +35,7 @@ body{
   position:absolute;
   top:-10px;
   font-size:14px;
-  opacity:0.7;
+  opacity:.7;
   animation:fall linear infinite;
 }
 @keyframes fall{
@@ -57,8 +52,6 @@ body{
   position:relative;
   z-index:2;
 }
-
-/* ===== HERO ===== */
 .hero{
   max-width:1100px;
   margin:auto;
@@ -95,44 +88,33 @@ body{
   margin-top:6px;
 }
 
-/* ===== SECTION ===== */
+/* ===== SECTIONS ===== */
 section{
-  padding:42px 8%;
+  padding:36px 8%;
   position:relative;
   z-index:2;
+}
+.section-box{
+  background:rgba(255,255,255,.65);
+  border-radius:28px;
+  padding:26px 30px;
+  box-shadow:0 14px 32px rgba(0,0,0,.12);
 }
 .title{
   font-size:26px;
   margin-bottom:14px;
 }
 
-/* ===== GRID ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:14px;
-}
-.card{
-  background:var(--card);
-  padding:18px 20px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
-}
-
 /* ===== SKILLS ===== */
 .badges{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
+  gap:10px;
 }
 .badge{
   background:var(--blue);
-  padding:6px 12px;
-  border-radius:14px;
+  padding:7px 14px;
+  border-radius:16px;
   font-size:14px;
 }
 
@@ -173,75 +155,52 @@ footer{
   </div>
 </div>
 
-<!-- ABOUT -->
 <section>
-  <div class="title">Giới thiệu</div>
-  <div class="grid">
-    <div class="card">
-      Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
-      Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt,
-      mong muốn tìm kiếm cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
-    </div>
+  <div class="section-box">
+    <div class="title">Giới thiệu</div>
+    Sinh viên chuyên ngành Tiếng Trung Thương mại tại Trường Đại học Ngoại thương.
+    Tôi có tinh thần trách nhiệm cao, khả năng học hỏi nhanh và làm việc nhóm tốt,
+    mong muốn tìm kiếm cơ hội thực tập để phát triển bản thân và đóng góp cho doanh nghiệp.
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section>
-  <div class="title">Học vấn & Thành tích</div>
-  <div class="grid">
-    <div class="card">
-      <b>Đại học Ngoại thương</b><br>
-      10/2022 – nay<br>
-      Tiếng Trung Thương mại
-    </div>
-    <div class="card">
-      GPA: <b>3.88 / 4.0</b><br>
-      05 lần liên tiếp nhận học bổng khuyến khích học tập
-    </div>
+  <div class="section-box">
+    <div class="title">Học vấn & Thành tích</div>
+    <p><b>Đại học Ngoại thương</b> (10/2022 – nay)<br>Tiếng Trung Thương mại</p>
+    <p>GPA: <b>3.88 / 4.0</b><br>05 lần liên tiếp nhận học bổng khuyến khích học tập</p>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section>
-  <div class="title">Kinh nghiệm</div>
-  <div class="grid">
-    <div class="card">
-      <b>Thực tập sinh – Viện Nghiên cứu Nam Ninh</b><br>
-      06/2025 – 07/2025
-      <ul>
-        <li>Quản lý hồ sơ & tài liệu dự án</li>
-        <li>Hỗ trợ tổ chức hội thảo, sự kiện</li>
-        <li>Giao tiếp với giảng viên & sinh viên Trung Quốc</li>
-      </ul>
-    </div>
-    <div class="card">
-      <b>Gia sư Toán THPT</b><br>
-      11/2022 – 05/2023
-      <ul>
-        <li>Nâng điểm Toán từ 5 → 8</li>
-        <li>Rèn kỹ năng giảng dạy & quản lý thời gian</li>
-      </ul>
-    </div>
+  <div class="section-box">
+    <div class="title">Kinh nghiệm</div>
+    <p><b>Thực tập sinh – Viện Nghiên cứu Nam Ninh</b> (06/2025 – 07/2025)</p>
+    <ul>
+      <li>Quản lý hồ sơ & tài liệu dự án</li>
+      <li>Hỗ trợ tổ chức hội thảo, sự kiện</li>
+      <li>Giao tiếp với giảng viên & sinh viên Trung Quốc</li>
+    </ul>
+    <p><b>Gia sư Toán THPT</b> (11/2022 – 05/2023)</p>
+    <ul>
+      <li>Nâng điểm Toán từ 5 → 8</li>
+      <li>Rèn kỹ năng giảng dạy & quản lý thời gian</li>
+    </ul>
   </div>
 </section>
 
-<!-- ACTIVITIES & SKILLS -->
 <section>
-  <div class="title">Hoạt động & Kỹ năng</div>
-  <div class="grid">
-    <div class="card">
-      Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU
-    </div>
-    <div class="card">
-      <div class="badges">
-        <div class="badge">Tiếng Trung tốt</div>
-        <div class="badge">Tiếng Anh khá</div>
-        <div class="badge">Word</div>
-        <div class="badge">Excel</div>
-        <div class="badge">PowerPoint</div>
-        <div class="badge">Làm việc nhóm</div>
-        <div class="badge">Quản lý thời gian</div>
-      </div>
+  <div class="section-box">
+    <div class="title">Hoạt động & Kỹ năng</div>
+    <p>Vòng chung kết “Cuộc thi viết chữ Hán đẹp” 2023 – FTU</p>
+    <div class="badges">
+      <div class="badge">Tiếng Trung tốt</div>
+      <div class="badge">Tiếng Anh khá</div>
+      <div class="badge">Word</div>
+      <div class="badge">Excel</div>
+      <div class="badge">PowerPoint</div>
+      <div class="badge">Làm việc nhóm</div>
+      <div class="badge">Quản lý thời gian</div>
     </div>
   </div>
 </section>
@@ -251,17 +210,16 @@ footer{
 </footer>
 
 <script>
-const snowContainer = document.querySelector('.snow-container');
-const symbols = ['❄️','❅','❆'];
-
+const snowContainer=document.querySelector('.snow-container');
+const symbols=['❄️','❅','❆'];
 function createSnow(){
-  const s = document.createElement('div');
-  s.className = 'snowflake';
-  s.innerText = symbols[Math.floor(Math.random()*symbols.length)];
-  s.style.left = Math.random()*100 + 'vw';
-  s.style.fontSize = Math.random()*8 + 10 + 'px';
-  s.style.opacity = Math.random();
-  s.style.animationDuration = Math.random()*5 + 6 + 's';
+  const s=document.createElement('div');
+  s.className='snowflake';
+  s.innerText=symbols[Math.floor(Math.random()*symbols.length)];
+  s.style.left=Math.random()*100+'vw';
+  s.style.fontSize=Math.random()*8+10+'px';
+  s.style.opacity=Math.random();
+  s.style.animationDuration=Math.random()*5+6+'s';
   snowContainer.appendChild(s);
   setTimeout(()=>s.remove(),11000);
 }
